@@ -2,16 +2,19 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abdullahal-mahmud.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://abdullah-al-mahmud.vercel.app"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Abdullah Al Mahmud | AI Research, Engineering & Leadership",
-    template: "%s | Abdullah Al Mahmud",
+    default: "A MAHMUD.LOG | Abdullah Al Mahmud",
+    template: "%s | A MAHMUD.LOG",
   },
   description:
-    "Portfolio of Abdullah Al Mahmud, an ICE undergraduate working across AI research, software engineering, communication, and community leadership in Bangladesh.",
+    "The merged academic, technical, and leadership portfolio of Abdullah Al Mahmud—an ICE undergraduate working across AI research, software engineering, communication, and community impact.",
   keywords: [
     "Abdullah Al Mahmud",
+    "A MAHMUD.LOG",
     "Information and Communication Engineering",
     "AI researcher Bangladesh",
     "OpenCLIP biomedical waste classification",
@@ -21,17 +24,18 @@ export const metadata: Metadata = {
   authors: [{ name: "Abdullah Al Mahmud" }],
   creator: "Abdullah Al Mahmud",
   openGraph: {
-    title: "Abdullah Al Mahmud — Project Ascend",
+    title: "A MAHMUD.LOG — Abdullah Al Mahmud",
     description: "Research with purpose. Build with impact.",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/images/abdullah-portrait.jpg", width: 1280, height: 960, alt: "Abdullah Al Mahmud" }],
+    url: siteUrl,
+    images: [{ url: "/images/formal-portrait.webp", width: 853, height: 1280, alt: "Abdullah Al Mahmud" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abdullah Al Mahmud — Project Ascend",
+    title: "A MAHMUD.LOG — Abdullah Al Mahmud",
     description: "Research with purpose. Build with impact.",
-    images: ["/images/abdullah-portrait.jpg"],
+    images: ["/images/formal-portrait.webp"],
   },
   robots: { index: true, follow: true },
 };
@@ -41,8 +45,8 @@ export const viewport: Viewport = {
   initialScale: 1,
   colorScheme: "dark light",
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#050711" },
-    { media: "(prefers-color-scheme: light)", color: "#f7f8fc" },
+    { media: "(prefers-color-scheme: dark)", color: "#0c0e0d" },
+    { media: "(prefers-color-scheme: light)", color: "#f4f0e8" },
   ],
 };
 

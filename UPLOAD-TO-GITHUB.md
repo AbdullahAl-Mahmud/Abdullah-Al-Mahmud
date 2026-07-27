@@ -1,15 +1,51 @@
-# Exact GitHub Upload Steps
+# Upload the merged portfolio to GitHub
 
-1. Extract `project-ascend-v2.zip`.
-2. Open the extracted `project-ascend-v2` folder.
-3. Select all of these together: `app`, `components`, `data`, `public`, and every file below them.
-4. In GitHub, open the repository and click **Add file → Upload files**.
-5. Drag the selected folders and files into the browser.
-6. Before committing, confirm the upload list contains paths such as:
-   - `/app/page.tsx`
-   - `/components/portfolio.tsx`
-   - `/data/site.ts`
-   - `/public/images/abdullah-portrait.jpg`
-7. Commit directly to the `main` branch.
-8. On the repository homepage, confirm you see the folders `app`, `components`, `data`, and `public`.
-9. Import the repository into Vercel and leave Root Directory empty.
+## Recommended: GitHub Desktop
+
+1. Install and open GitHub Desktop.
+2. Sign in to your GitHub account.
+3. Clone your portfolio repository.
+4. Open the cloned repository folder on your computer.
+5. Delete the old website files inside the cloned repository folder.
+6. Copy **all files and folders from this project** into the cloned repository folder.
+7. GitHub Desktop will list the changes.
+8. Commit with: `Merge A MAHMUD.LOG and Project Ascend`.
+9. Click **Push origin**.
+
+## Correct repository homepage
+
+Your GitHub repository homepage must show these folders and files:
+
+```text
+app/
+components/
+data/
+public/
+package.json
+next.config.ts
+postcss.config.mjs
+tsconfig.json
+README.md
+```
+
+Inside `app/`, GitHub must show:
+
+```text
+globals.css
+layout.tsx
+page.tsx
+robots.ts
+sitemap.ts
+```
+
+Do not upload `page.tsx`, `layout.tsx`, or `globals.css` directly to the repository homepage. They belong inside the `app` folder.
+
+## Vercel settings
+
+```text
+Framework Preset: Next.js
+Root Directory: leave empty
+Build Command: default
+Output Directory: default
+Install Command: default
+```

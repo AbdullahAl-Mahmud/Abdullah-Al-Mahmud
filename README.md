@@ -1,37 +1,25 @@
-# Project Ascend v2
+# A MAHMUD.LOG × Project Ascend
 
-A production-oriented portfolio for **Abdullah Al Mahmud**, built with Next.js App Router, TypeScript, Framer Motion, next-themes, and accessible custom CSS.
+A single merged portfolio application for **Abdullah Al Mahmud**. It combines the editorial field-log identity of the earlier portfolio with the interactive modes, polished motion, research presentation, GitHub integration, and responsive architecture of Project Ascend.
 
-## Important: upload the folders, not only the files
+## Included
 
-Your GitHub repository homepage must show this exact structure:
+- A MAHMUD.LOG brand identity
+- PUST campus background
+- Research / Engineer / Leadership viewing modes
+- Editorial experience timeline
+- OpenCLIP biomedical-waste research case study
+- PUST Transit concept
+- Project-showcase feature
+- Live GitHub profile statistics
+- Certificates, skills, education, awards, volunteering, and contact sections
+- Gallery with an accessible full-screen viewer
+- Dark and light themes
+- Reduced-motion accessibility support
+- Downloadable resume
+- Vercel-ready Next.js App Router structure
 
-```text
-app/
-components/
-data/
-public/
-package.json
-next.config.ts
-tsconfig.json
-eslint.config.mjs
-README.md
-LICENSE
-```
-
-Inside `app/`, GitHub must show:
-
-```text
-app/globals.css
-app/layout.tsx
-app/page.tsx
-app/robots.ts
-app/sitemap.ts
-```
-
-Do **not** upload `page.tsx`, `layout.tsx`, or `globals.css` directly into the repository root.
-
-## Run locally
+## Local development
 
 ```bash
 npm install
@@ -40,42 +28,55 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+## Production test
+
+```bash
+npm run build
+npm start
+```
+
 ## Deploy to Vercel
 
-1. Create or clean a GitHub repository.
-2. Upload all folders and files shown above while preserving the folder structure.
-3. Import the repository into Vercel.
+1. Upload the complete project to a GitHub repository.
+2. In Vercel, select **Add New → Project**.
+3. Import that GitHub repository.
 4. Use **Framework Preset: Next.js**.
-5. Leave **Root Directory empty** because `package.json` and `app/` are in the repository root.
-6. Leave Build Command, Output Directory, and Install Command at their defaults.
+5. Keep **Root Directory empty** if `package.json` and the `app` folder are visible on the repository homepage.
+6. Keep Build Command, Output Directory, and Install Command on their defaults.
 7. Deploy.
 
-## Update portfolio content
+Optional environment variable:
 
-Most content is centralized in:
+```text
+NEXT_PUBLIC_SITE_URL=https://your-final-domain.example
+```
+
+## Update content
+
+Edit:
 
 ```text
 data/site.ts
 ```
 
-Replace the profile photo at:
+## Update images
+
+Images are organized under:
 
 ```text
-public/images/abdullah-portrait.jpg
+public/images/
+public/images/gallery/
+public/images/editorial/
 ```
 
-Replace the CV at:
+## Resume
+
+Replace this file while keeping the filename unchanged:
 
 ```text
 public/resume/abdullah-al-mahmud-cv.pdf
 ```
 
-## Notes
-
-- GitHub statistics are loaded from the public GitHub API in the browser.
-- Certificate PDF/image previews can be added later when the files are available.
-- Replace the placeholder URL in `app/sitemap.ts` after Vercel assigns the final domain.
-
 ## License
 
-MIT.
+MIT License.
